@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel y Cotizador</title>
+    <link rel="stylesheet" href="carrusel.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Carrusel -->
+    <div class="carrusel" >
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h2 >$950.000</h2>
+                <img src="img/kontrol2.png" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <h2>$360.000</h2>
+                <img src="img/hjc.png" class="d-block w-100" alt="Imagen 2" >
+              </div>
+              <div class="carousel-item">
+                <h2>$280.000</h2>
+                <img src="img/agv.png" class="d-block w-100" alt="Imagen 3" >
+              </div>
+            </div>
+            <!-- botones de control -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+    <div class="cotizadorP">
+        
+
+        <!-- Cotizador -->
+        <h2>Cotizador de Producto</h2>
+
+        <form id="cotizadorForm">            
+            <div class="input-group flex-nowrap">
+                <button class="btn btn-outline-secondary" disabled  id="button-addon1">Cantidad</button>
+                <input type="number" class="form-control" id="cantidad" name="cantidad" value="1" min="1"  aria-label="Cantidad" aria-describedby="addon-wrapping">
+                <button type="button"  class="btn btn-primary" onclick="cotizar()">Cotizar</button>
+              </div>
+            
+        </form>
+        <p id="resultadoCotizacion" style="text-align: center; padding-top: 5%;"></p>
+        <button class="btn btn-secondary" hidden id="btn-cancelar" onclick="clean()">Cancelar</button>
+    </div>
+
+    <script src="carrusel.js"></script>
+</body>
+
+</html>
